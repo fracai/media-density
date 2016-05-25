@@ -10,12 +10,8 @@ import os
 import re
 
 
-def convert(text):
-    return int(text) if text.isdigit() else text
-
-
 def alphanum_key(key):
-    return [convert(c) for c in re.split('([0-9]+)', key)]
+    return [int(text) if text.isdigit() else text for text in re.split('([0-9]+)', key)]
 
 
 def sorted_nicely(l):
