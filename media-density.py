@@ -132,7 +132,7 @@ if __name__ == '__main__':
         if 0 == item_duration:
             continue
         if args.summary:
-            print_stat(item, total_bytes, total_duration)
+            print_stat(item, item_bytes, item_duration)
     if 0 == total_duration:
         sys.exit(0)
     if args.total:
